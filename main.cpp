@@ -20,8 +20,6 @@ void ExecuteMenu(char option, ShoppingCart& theCart) {
     string itemName, itemDescription;
     int itemPrice, itemQuantity;
 
-    cout << endl;
-
     if (option == 'a'){
 
         cout << "ADD ITEM TO CART" << endl;
@@ -101,6 +99,10 @@ int main() {
 
     ShoppingCart cart(customerName, currentDate);
 
+    cout << endl;
+    cout << "Customer name: " << customerName << endl;
+    cout << "Today's date: " << currentDate << endl;
+
     while (option != 'q'){
 
         cout << endl;
@@ -109,7 +111,7 @@ int main() {
 
         while (true){
             
-            cout << "Choose an option: ";
+            cout << "Choose an option:" << endl;
             cin >> option;
 
             if ((option == 'a') || (option == 'd') || (option == 'c') || (option == 'i') || (option == 'o') || (option == 'q'))
