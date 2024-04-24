@@ -51,7 +51,7 @@ void ShoppingCart::ModifyItem(ItemToPurchase item){
             return;
         }
                 
-    cout << "Item not found in cart. Nothing removed." << endl;
+    cout << "Item not found in cart. Nothing modified." << endl;
 
 }
 
@@ -82,14 +82,18 @@ int ShoppingCart::GetCostOfCart(){
 
 void ShoppingCart::PrintTotal(){
 
-    if (cartItems.size() == 0)
+    cout << customerName << "'s Shopping Cart - " << currentDate << endl;
+    cout << "Number of Items: " << GetNumItemsInCart() << endl;
+    cout << endl;
+
+    if (cartItems.size() == 0) {
+
         cout << "SHOPPING CART IS EMPTY" << endl;
-
-    else {
-
-        cout << customerName << "'s Shopping Cart - " << currentDate << endl;
-        cout << "Number of Items: " << GetNumItemsInCart() << endl;
         cout << endl;
+        cout << "Total: $0" << endl;
+
+    }
+    else {
 
         for (int i = 0; i < cartItems.size(); i++)
             cartItems[i].PrintItemCost();
