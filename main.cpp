@@ -1,3 +1,5 @@
+// Team members: Muxin, Khoi
+
 #include <iostream>
 #include <iomanip>
 #include "ShoppingCart.h"
